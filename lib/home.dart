@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
               width: MediaQuery.of(context).size.width,
               child: Image.asset("assets/aniket-circle.png"),
             )),
-            SizedBox(height: 20),
+            SizedBox(height: 45),
             Text(
               'Profile',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
@@ -39,11 +39,49 @@ class _HomeState extends State<Home> {
               'Settings',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 45),
             Text(
-              'Profile',
+              'About',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-            )
+            ),
+            SizedBox(height: 45),
+            Text(
+              'Logout',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            ),
+            SizedBox(height: 45),
+            Material(
+              borderRadius: BorderRadius.circular(500),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(500),
+                splashColor: Colors.black,
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+                child: CircleAvatar(
+                  radius: 20,
+                  backgroundColor: Colors.black,
+                  child: Icon(Icons.arrow_back, color: Colors.white),
+                ),
+              ),
+            ),
+            Expanded(
+                child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                  height: 65,
+                  width: MediaQuery.of(context).size.width,
+                  color: Colors.black,
+                  child: Center(
+                    child: Text(
+                      'Interested',
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white),
+                    ),
+                  )),
+            ))
           ],
         ),
       ),
