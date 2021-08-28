@@ -1,5 +1,6 @@
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:interested/screens/homepage.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -86,9 +87,7 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: <Widget>[
-        Container(
-          color: Colors.redAccent,
-        ),
+        HomePage(),
         Container(
           color: Colors.purpleAccent,
         ),

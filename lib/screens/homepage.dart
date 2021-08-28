@@ -16,6 +16,14 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.fromLTRB(25, 10, 25, 25),
                 child: Align(
                   alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Heading Top News",
+                    style: TextStyle(
+                        fontFamily: "Times",
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700),
+                    textAlign: TextAlign.left,
+                  ),
                 ),
               ),
             )
