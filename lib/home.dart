@@ -18,6 +18,35 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.black),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            SizedBox(height: 30),
+            DrawerHeader(
+                child: Container(
+              height: 140,
+              width: MediaQuery.of(context).size.width,
+              child: Image.asset("assets/aniket-circle.png"),
+            )),
+            SizedBox(height: 20),
+            Text(
+              'Profile',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            ),
+            SizedBox(height: 45),
+            Text(
+              'Settings',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Profile',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            )
+          ],
+        ),
+      ),
       body: <Widget>[
         Container(
           color: Colors.redAccent,
