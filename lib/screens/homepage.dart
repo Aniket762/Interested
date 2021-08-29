@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interested/model/categories.dart';
+import 'package:interested/widgets/card.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -84,9 +85,16 @@ class _HomePageState extends State<HomePage>
         },
         body: Container(
           child: TabBarView(
-            controller: _tabController,
-            children: List.generate(categories.length, (index) => Container()),
-          ),
+              controller: _tabController,
+              children: List.generate(categories.length, (index) {
+                return ListView.builder(
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    return JobCard();
+                  },
+                  padding: EdgeInsets.symmetric(horizontal: 25),
+                );
+              })),
         ));
   }
 }
