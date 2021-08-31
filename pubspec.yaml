@@ -23,6 +23,9 @@ environment:
 dependencies:
   bubble_bottom_bar: ^1.2.0
   cupertino_icons: ^1.0.2
+  xml2json: ^5.3.1
+  http: ^0.13.3
+
   flutter:
     sdk: flutter
 
